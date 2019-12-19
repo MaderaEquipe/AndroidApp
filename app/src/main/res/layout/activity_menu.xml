@@ -12,23 +12,67 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150px"
+                android:layout_height="50px"
                 android:background="#3B3B3B">
 
+                <RelativeLayout
+                    android:layout_width="862dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#3B3B3B" />
 
                 <Button
                     android:id="@+id/button2"
-                    android:layout_width="58dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="5px"
+                    android:layout_marginBottom="5px"
                     android:layout_weight="1"
-                    android:background="@drawable/settings" />
+                    android:background="@drawable/settingswhite" />
 
                 <Button
                     android:id="@+id/button3"
+                    android:layout_width="5px"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="5px"
+                    android:layout_weight="1"
+                    android:background="@drawable/exit" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="50px"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
+                android:background="#FFFFFF">
+
+                <Button
+                    android:id="@+id/projet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/exit" />
+                    android:background="@drawable/buttonclient" />
+
+                <Button
+                    android:id="@+id/clients"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonprojet" />
+
+                <Button
+                    android:id="@+id/devis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttondevis" />
+                <RelativeLayout
+                    android:id="@+id/devdis"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF" />
+
             </LinearLayout>
         </RelativeLayout>
 
