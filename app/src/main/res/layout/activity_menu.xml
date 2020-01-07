@@ -1,83 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MenuActivity">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50px"
-                android:background="#3B3B3B">
+    <LinearLayout
+        android:layout_width="450dp"
+        android:layout_height="86dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent">
 
-                <RelativeLayout
-                    android:layout_width="862dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#3B3B3B" />
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="30px"
-                    android:layout_marginTop="5px"
-                    android:layout_marginBottom="5px"
-                    android:layout_weight="1"
-                    android:background="@drawable/settingswhite" />
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="5px"
-                    android:layout_height="25dp"
-                    android:layout_marginRight="20px"
-                    android:layout_marginTop="5px"
-                    android:layout_weight="1"
-                    android:background="@drawable/exit" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginTop="50px"
-                android:layout_width="wrap_content"
-                android:layout_height="150px"
-                android:background="#FFFFFF">
-
-                <Button
-                    android:id="@+id/projets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonclient" />
-
-                <Button
-                    android:id="@+id/clients"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonprojet" />
-
-                <Button
-                    android:id="@+id/devis"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttondevis" />
-                <RelativeLayout
-                    android:id="@+id/devdis"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#FFFFFF" />
-
-            </LinearLayout>
-        </RelativeLayout>
+        <Button
+            android:id="@+id/projets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttonprojet" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/devis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/buttondevis" />
+
+
+        <Button
+            android:id="@+id/clients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/buttonclient"
+            android:gravity="right" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/transparent_divider"
+        android:rotation="180" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/voirProjet"
+            android:layout_width="380dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@drawable/buttonadd" />
+
+        <Button
+            android:id="@+id/newProjet"
+            android:layout_width="271dp"
+            android:layout_height="61dp"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@drawable/buttonvoirprojet" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/voirClient"
+            android:layout_width="254dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/voirclient"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/newClient"
+            android:layout_width="359dp"
+            android:layout_height="61dp"
+            android:layout_weight="1"
+            android:background="@drawable/nouveauclient"
+            android:visibility="invisible" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/voirDevis"
+            android:layout_width="254dp"
+            android:layout_height="61dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/voirdevis"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+</LinearLayout>
 
 
 

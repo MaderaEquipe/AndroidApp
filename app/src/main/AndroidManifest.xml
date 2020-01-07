@@ -10,6 +10,7 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ProjectsList"></activity>
         <activity
             android:name=".Connection"
             android:screenOrientation="landscape">
