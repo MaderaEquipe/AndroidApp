@@ -1,25 +1,27 @@
 package com.reinc.madera;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button btnLcli, btnLfrais, btnNc, btnNf, btnParam, btnP;
-    static public String CLIENT_ID = "com.reinc.myapplication.clientId";
+    Button btnProjets, btnClients, btnDevis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-     /*   btnLcli = (Button) findViewById(R.id.buttonlisteclient);
-        btnLfrais = (Button) findViewById(R.id.buttonlistefrais);
+        btnProjets = (Button) findViewById(R.id.projets);
+        btnClients = (Button) findViewById(R.id.clients);
+        btnDevis = (Button) findViewById(R.id.devis);
 
 
 
-        btnLcli.setOnClickListener(new View.OnClickListener() {
+        btnClients.setOnClickListener(new View.OnClickListener() {
 
                                        public void onClick(View v) {
 
@@ -30,17 +32,28 @@ public class MenuActivity extends AppCompatActivity {
                                        }
                                    }
         );
-        btnLfrais.setOnClickListener(new View.OnClickListener() {
+        btnProjets.setOnClickListener(new View.OnClickListener() {
 
                                          public void onClick(View v) {
 
-                                             Intent intent = new Intent(MenuActivity.this, Client.class);
+                                             Intent intent = new Intent(MenuActivity.this, Projet.class);
                                              startActivity(intent);
 
 
                                          }
                                      }
-        ); */
+        );
+        btnDevis.setOnClickListener(new View.OnClickListener() {
+
+                                          public void onClick(View v) {
+
+                                              Intent intent = new Intent(MenuActivity.this, Devis.class);
+                                              startActivity(intent);
+
+
+                                          }
+                                      }
+        );
     }
 }
 

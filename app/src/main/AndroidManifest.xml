@@ -7,14 +7,57 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MenuActivity">
+        <activity
+            android:name=".Connection"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuActivity"
+            android:parentActivityName=".Connection"
+            android:screenOrientation="landscape">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Connection" />
+        </activity>
+        <activity
+            android:name=".Client"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="landscape">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Projet"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="landscape">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+        <activity
+            android:name=".Devis"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="landscape">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
         </activity>
     </application>
 

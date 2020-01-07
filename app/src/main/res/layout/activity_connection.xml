@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="landscape"
+    android:background="#F9F9F9"
+    tools:context=".Connection">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="48dp">
+        <ImageView
+            android:id="@+id/logoMadera"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginLeft="505px"
+            android:src="@drawable/maderalogo"></ImageView>
+
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Mot de passe"
+            android:focusable="false"
+            android:inputType="textPassword"> <!-- focusable a supprimer lors de l'ajout du mot de passe-->
+
+         <!--   <requestFocus /> -->
+        </EditText>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="Nom d'utilisateur"
+            android:focusable="false"
+            android:inputType="textPersonName" /> <!-- focusable a supprimer lors de l'ajout du mot de passe-->
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logoMadera"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginLeft="420px"
+            android:text="Outil de gestion de création de devis"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+        <Button
+            android:id="@+id/connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="44dp"
+            android:background="#4D4949"
+            android:paddingLeft="60px"
+            android:paddingRight="60px"
+            android:text="Connecter vous"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

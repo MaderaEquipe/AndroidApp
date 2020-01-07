@@ -4,12 +4,11 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Client  extends AppCompatActivity {
+public class Projet  extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.clients);
-
+        setContentView(R.layout.projets);
     }
 }

@@ -47,7 +47,7 @@
                 android:background="#FFFFFF">
 
                 <Button
-                    android:id="@+id/projet"
+                    android:id="@+id/projets"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
