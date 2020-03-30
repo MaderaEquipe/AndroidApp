@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.reinc.madera.ListeClients"
+    android:id="@+id/lytMain"
+    android:gravity="center"
+
+    android:weightSum="1">
+
+
+
+    <!--<Button
+        android:gravity="center"
+        style="@style/CustumButtonStyle"
+
+        android:id="@+id/btnGetJson"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:textStyle="italic"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#0074BF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:text="Liste client"
+        />-->
+
+    <ListView
+        android:id="@+id/lvClients"
+        android:layout_width="match_parent"
+        android:background="#fff"
+
+        android:layout_height="match_parent" />
+
+
+
+    <!--   <TextView
+           android:id="@+id/tvFruits"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#CCF"
+           android:minHeight="60dp"/>-->
+
+
+</LinearLayout>
