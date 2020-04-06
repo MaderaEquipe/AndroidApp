@@ -28,187 +28,200 @@
 
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Madera"
+                android:text="Client"
                 android:layout_marginLeft="50dp"
-                android:textColor="#A71D00"
+                android:textColor="#000000"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 />
         </RelativeLayout>
 
+        <include layout="@layout/item_divider" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:padding="16dp">
-
-
+            <!--/////////////////////////////////////////////////////////////////-->
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
                 android:text="Nom : "
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121"
-                android:textSize="23dp" />
+                android:textSize="23dp"/>
 
             <TextView
                 android:id="@+id/clientFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="25dp"
                 android:text="Nom client"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121" />
+                android:textColor="#212121"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="25dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="300dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="25dp"
+                android:text="Prenom : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
 
             <TextView
                 android:id="@+id/clientName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="50dp"
-
                 android:text="Prenom client"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#727272" />
-
-
-        </RelativeLayout>
-        <include layout="@layout/item_divider" />
-
-        <include layout="@layout/item_divider" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:padding="16dp">
-            <TextView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:textSize="23dp"
-                android:text="Adresse : "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121" />
-
-            <TextView
-                android:id="@+id/clientAddress1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="25dp"
-                android:text="Adresse : "
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121" />
-
-            <TextView
-                android:id="@+id/clientVille"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="50dp"
-
-                android:text="ville"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272"
-                />
+                android:layout_marginLeft="400dp"
+                android:layout_marginStart="400dp"
+                android:layout_marginTop="25dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
 
             <TextView
-                android:id="@+id/clientCodeP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="75dp"
-
-                android:text="code postal"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#727272"
-                />
+                android:text="Telephone : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
 
             <TextView
                 android:id="@+id/clientTelB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="100dp"
-
+                android:layout_marginLeft="180dp"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="75dp"
                 android:text="Telephone"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272"
-                />
+                android:textSize="23dp"/>
 
-            <ToggleButton
-                android:id="@+id/chkState3"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:checked="true"
-                android:padding="6dp"
-                android:textOff=""
-                android:textOn="" />
-
-        </RelativeLayout>
-        <include layout="@layout/item_divider" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:padding="16dp">
-
-            <ImageView
-                android:id="@+id/ivContactItem4"
+            <!--/////////////////////////////////////////////////////////////////-->
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
-                />
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="130dp"
+                android:text="Adresse : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/clientAddress1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adresse : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="130dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="180dp"
+                android:text="Ville : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/clientVille"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ville"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="180dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="400dp"
+                android:layout_marginStart="400dp"
+                android:layout_marginTop="180dp"
+                android:text="Code postal: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/clientCodeP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="code postal"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272"
+                android:layout_marginLeft="550dp"
+                android:layout_marginStart="550dp"
+                android:layout_marginTop="180dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="235dp"
+                android:text="Email : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
 
             <TextView
                 android:id="@+id/clientMail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="235dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="pratik@letsnurture.com"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121" />
-
-
-
-
+                android:textColor="#212121"
+                android:textSize="23dp"/>
 
         </RelativeLayout>
-
         <include layout="@layout/item_divider" />
-
-
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -216,22 +229,26 @@
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:padding="16dp">
+
             <Button
                 android:id="@+id/btnGo"
-                android:layout_width="49dp"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="50dp"
-                android:layout_margin="5dp"
+                android:layout_marginEnd="5dp"
                 android:clickable="true"
                 android:elevation="4dp"
-                android:textColor="#fff"
                 android:gravity="center"
                 android:padding="8dp"
                 android:text="Go"
-                android:textSize="15sp" />
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:background="#008577"/>
+
             <Button
                 android:id="@+id/btnTelB"
-                android:layout_width="49dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:elevation="4dp"
@@ -244,11 +261,12 @@
                 android:layout_marginRight="5dp"
                 android:layout_alignBaseline="@+id/btnGo"
                 android:layout_alignBottom="@+id/btnGo"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:background="#008577"/>
             <Button
 
                 android:id="@+id/btnMail"
-                android:layout_width="49dp"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:elevation="4dp"
@@ -261,7 +279,8 @@
                 android:layout_marginRight="5dp"
                 android:layout_alignBaseline="@+id/btnGo"
                 android:layout_alignBottom="@+id/btnGo"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:background="#008577"/>
 
         </RelativeLayout>
 
@@ -274,13 +293,15 @@
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="wrap_content"
+                android:layout_width="102dp"
                 android:layout_height="wrap_content"
-                android:textColor="#fff"
-                android:layout_marginBottom="16dp"
+                android:layout_margin="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:layout_weight="0.35"
-                android:text="Modifier" />
+                android:background="#008577"
+                android:text="Modifier"
+                android:textColor="#fff" />
 
 
             <Button
@@ -290,7 +311,9 @@
                 android:textColor="#fff"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_weight="0.36"
+                android:layout_margin="16dp"
+                android:layout_weight="0.35"
+                android:background="#008577"
                 android:text="Supprimer" />
 
 
