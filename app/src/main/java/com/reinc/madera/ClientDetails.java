@@ -351,9 +351,8 @@ public class ClientDetails extends AppCompatActivity {
             }
         }
     };
-}
 
-  /*  public void delete(){
+    public void delete(){
         FileDownloader myFd = new FileDownloader(ClientDetails.this) {
             @Override
             protected void onPostExecute(String result) {
@@ -366,15 +365,17 @@ public class ClientDetails extends AppCompatActivity {
         myFd.addVariable("IdClient", clientId);
         //myFd.addVariable( "IdClient", ((EditText) findViewById(R.id.NNom)).getText().toString());
 
-        myFd.execute("http://www.e-manager.fr/api/client");
+        myFd.execute("https://api-madera.herokuapp.com/api/clients/");
         Toast.makeText(this, "Le client à bien été supprime", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent (ClientDetails.this, ListeClient.class);
-                intent.putExtra(CLIENT_ID, String.valueOf(clientId));
-                startActivity(intent);
+        Intent intent = new Intent (ClientDetails.this, ListeClients.class);
+        intent.putExtra(CLIENT_ID, String.valueOf(clientId));
+        startActivity(intent);
 
     }
+
 }
 
 
 
-*/
+
+

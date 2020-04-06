@@ -36,6 +36,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ListeClients" />
         </activity>
+        <activity
+            android:name=".NouveauClient"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="landscape">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NouveauClient" />
+        </activity>
         <activity android:name=".ProjectsList" />
         <activity
             android:name=".Connection"

@@ -71,7 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         );
         newClient.setOnClickListener(new View.OnClickListener() {
                                           public void onClick(View v) {
-                                              Intent intent = new Intent(MenuActivity.this, ClientDetails.class);
+                                              Intent intent = new Intent(MenuActivity.this, NouveauClient.class);
                                               startActivity(intent);
                                           }
                                       }

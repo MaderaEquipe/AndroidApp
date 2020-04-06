@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    tools:context="com.reinc.madera.NouveauClient"
+    android:layout_gravity="center"
+    >
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="324dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/editrond" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:text="Nouveau client"/>
+        <EditText
+            android:id="@+id/NNom"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Nom"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <EditText
+            android:id="@+id/NPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Prenom"
+            android:paddingLeft="10dp"
+            android:textAlignment="center"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"></LinearLayout>
+
+
+        <EditText
+            android:id="@+id/NVille"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Ville"
+            android:textAlignment="center"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <EditText
+            android:id="@+id/NTel"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Telephone"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <EditText
+            android:id="@+id/NMail"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:background="@drawable/border"
+            android:hint="Mail"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <EditText
+            android:id="@+id/NAdresse"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Adresse"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal"></LinearLayout>
+
+        <EditText
+            android:id="@+id/NCodeP"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Code Postale"
+            android:paddingLeft="10dp"
+            android:textColorHint="#000"
+            android:textSize="22dp" />
+
+
+
+        <Button
+            android:id="@+id/btnN"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border"
+            android:onClick="sendPostData"
+            android:text="Envoyer"
+            android:textAllCaps="false" />
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
