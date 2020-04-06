@@ -91,4 +91,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="GoogleApiKey">AIzaSyDYq6hL01DuheM6q8I1DNZFpNcjwaSjPkk</string>
+    <string name="GoogleApiKeyJs">AIzaSyA3JI1M37xzKVTBBd7JLXWtgZIPLdi1HCk</string>
 </resources>

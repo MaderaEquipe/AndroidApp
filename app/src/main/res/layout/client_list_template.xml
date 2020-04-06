@@ -22,7 +22,7 @@
                 android:layout_weight="0.25">
 
                 <TextView
-                    android:id="@+id/userFullname"
+                    android:id="@+id/userName"
                     android:layout_width="291dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="3dp"
@@ -35,7 +35,7 @@
                     android:textColor="#212121" />
 
                 <TextView
-                    android:id="@+id/userDescription"
+                    android:id="@+id/UserSurname"
                     android:layout_width="298dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvNumber1"

@@ -32,8 +32,8 @@ public class ClientsAdapter extends ArrayAdapter<Client> {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(listItemResLayout, parent, false);
 
-            final TextView tvUserName = (TextView) view.findViewById(R.id.editText1);
-            final TextView tvUserSurname = (TextView) view.findViewById(R.id.editText1);
+            final TextView tvUserName = (TextView) view.findViewById(R.id.userName);
+            final TextView tvUserSurname = (TextView) view.findViewById(R.id.UserSurname);
 
             // On stocke les Widgets dans le Holder pour optimiser les appels au "view.findViewById"
             holder = new ViewHolder();
