@@ -205,7 +205,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_weight="0.35"
                 android:background="#008577"
-                android:text="Modifier"
+                android:text="Valider le devis"
                 android:textColor="#fff" />
 
 
