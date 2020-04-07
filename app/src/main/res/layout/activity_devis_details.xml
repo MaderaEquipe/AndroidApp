@@ -219,7 +219,7 @@
                 android:layout_margin="16dp"
                 android:layout_weight="0.35"
                 android:background="#008577"
-                android:text="Supprimer" />
+                android:text="Supprimer le devis" />
 
 
         </LinearLayout>
