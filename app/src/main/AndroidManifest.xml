@@ -96,6 +96,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuActivity" />
         </activity>
+        <activity
+            android:name=".ListeDevis"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="landscape">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+        <activity
+            android:name=".DevisDetails"
+            android:parentActivityName=".ListeDevis"
+            android:screenOrientation="landscape">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListeDevis" />
+        </activity>
     </application>
 
 </manifest>

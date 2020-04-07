@@ -85,7 +85,7 @@ public class MenuActivity extends AppCompatActivity {
         );
         devis.setOnClickListener(new View.OnClickListener() {
                                        public void onClick(View v) {
-                                           Intent intent = new Intent(MenuActivity.this, Devis.class);
+                                           Intent intent = new Intent(MenuActivity.this, ListeDevis.class);
                                            startActivity(intent);
                                        }
                                    }

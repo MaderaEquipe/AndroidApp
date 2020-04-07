@@ -56,7 +56,7 @@ public class NouveauClient extends AppCompatActivity {
         myFd.addVariable("emailClient", ((EditText) findViewById(R.id.NMail)).getText().toString());
         myFd.addVariable( "telClient", ((EditText) findViewById(R.id.NTel)).getText().toString());
         Log.i("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", String.valueOf(myFd));
-        myFd.execute("https://api-madera.herokuapp.com/api/clients");
+        myFd.execute("https://api-madera.herokuapp.com/api/clients/");
 
         Intent intent = new Intent(NouveauClient.this, ListeClients.class);
         Toast.makeText(NouveauClient.this,

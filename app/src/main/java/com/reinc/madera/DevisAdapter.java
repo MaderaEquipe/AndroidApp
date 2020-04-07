@@ -32,13 +32,13 @@ public class DevisAdapter extends ArrayAdapter<Devis> {
             LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(listItemResLayout, parent, false);
 
-            final TextView tvUserName = (TextView) view.findViewById(R.id.editText1);
-            final TextView tvUserSurname = (TextView) view.findViewById(R.id.editText1);
+            final TextView tvDevisNom = (TextView) view.findViewById(R.id.devisNom);
+            final TextView tvDevisMontant = (TextView) view.findViewById(R.id.devisMontant);
 
             // On stocke les Widgets dans le Holder pour optimiser les appels au "view.findViewById"
             holder = new ViewHolderDevis();
-            holder.name = tvUserName;
-            holder.surname = tvUserSurname;
+            holder.nom = tvDevisNom;
+            holder.montant = tvDevisMontant;
             view.setTag(holder);
 
         } else {
@@ -49,8 +49,8 @@ public class DevisAdapter extends ArrayAdapter<Devis> {
         final Devis currentDevis = data.get(position);
 
         if (currentDevis != null) {
-            holder.name.setText(currentDevis.getEtatDevis());
-            holder.surname.setText( currentDevis.getCreationDate());
+            holder.nom.setText(currentDevis.getEtatDevis());
+            holder.montant.setText( currentDevis.getCreationDate());
         }
 
         return view;
@@ -64,6 +64,6 @@ public class DevisAdapter extends ArrayAdapter<Devis> {
 
 }
 class ViewHolderDevis {
-    TextView name;
-    TextView surname;
+    TextView nom;
+    TextView montant;
 }

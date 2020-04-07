@@ -1,0 +1,231 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:padding="16dp"
+    android:background="#fff"
+    tools:context="com.reinc.madera.DevisDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/header_cover_image"
+            android:layout_height="50dp">
+
+
+            <ImageView
+                android:id="@+id/header_cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-7dp"
+                android:layout_marginTop="-2dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Devis"
+                android:layout_marginLeft="50dp"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+
+        <include layout="@layout/item_divider" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="16dp">
+            <!--/////////////////////////////////////////////////////////////////-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:text="Projet: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/projet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:layout_marginLeft="100dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="25dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="300dp"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="25dp"
+                android:text="Etat : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/etatDevis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272"
+                android:layout_marginLeft="400dp"
+                android:layout_marginStart="400dp"
+                android:layout_marginTop="25dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="75dp"
+                android:text="Total HT : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/totalHT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="75dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="75dp"
+                android:text="Total TTC : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/totalTTC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="400dp"
+                android:layout_marginLeft="400dp"
+                android:layout_marginTop="75dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp" />
+
+            <!--/////////////////////////////////////////////////////////////////-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="135dp"
+                android:text="Taux de remise : "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/tauxRemise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272"
+                android:layout_marginLeft="220dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="135dp"
+                android:textSize="23dp"/>
+
+            <!--/////////////////////////////////////////////////////////////////-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="135dp"
+                android:text="Date de création: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/creationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272"
+                android:layout_marginLeft="450dp"
+                android:layout_marginStart="450dp"
+                android:layout_marginTop="135dp"
+                android:textSize="23dp"/>
+
+        </RelativeLayout>
+        <include layout="@layout/item_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="0.35"
+                android:background="#008577"
+                android:text="Modifier"
+                android:textColor="#fff" />
+
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_margin="16dp"
+                android:layout_weight="0.35"
+                android:background="#008577"
+                android:text="Supprimer" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

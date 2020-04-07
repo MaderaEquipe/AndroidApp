@@ -7,8 +7,17 @@ public class Devis {
     private String totalTTC;
     private String tauxRemise;
     private String creationDate;
-    private String margeEntreprise;
-    private String margeCommercial;
+    private String projet;
+
+    public Devis(String idDevis, String etatDevis, String totalHT, String totalTTC, String tauxRemise, String creationDate, String projet) {
+        this.idDevis = idDevis;
+        this.etatDevis = etatDevis;
+        this.totalHT = totalHT;
+        this.totalTTC = totalTTC;
+        this.tauxRemise = tauxRemise;
+        this.creationDate = creationDate;
+        this.projet = projet;
+    }
 
     public String getIdDevis() {
         return idDevis;
@@ -58,20 +67,13 @@ public class Devis {
         this.creationDate = creationDate;
     }
 
-    public String getMargeEntreprise() {
-        return margeEntreprise;
+    public String getProjet() {
+        return projet;
     }
 
-    public void setMargeEntreprise(String margeEntreprise) {
-        this.margeEntreprise = margeEntreprise;
+    public void setProjet(String projet) {
+        this.projet = projet;
     }
 
-    public String getMargeCommercial() {
-        return margeCommercial;
-    }
-
-    public void setMargeCommercial(String margeCommercial) {
-        this.margeCommercial = margeCommercial;
-    }
 }
 
