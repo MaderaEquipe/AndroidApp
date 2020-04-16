@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    tools:context="com.reinc.madera.NouveauClient"
+    tools:context="com.reinc.madera.NouveauProjet"
     android:layout_gravity="center"
     >
 
@@ -28,21 +28,23 @@
             android:layout_height="77dp"
             android:layout_centerHorizontal="true"
             android:src="@drawable/editrond" />
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_marginBottom="5dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Nouveau Projet"
             android:textSize="30dp"
-            android:textStyle="italic"
-            android:text="Nouveau client"/>
+            android:textStyle="italic" />
+
         <EditText
-            android:id="@+id/NNom"
-            android:textAlignment="center"
+            android:id="@+id/NLabelPlan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/border"
-            android:hint="Nom"
+            android:hint="Label Plan"
             android:paddingLeft="10dp"
+            android:textAlignment="center"
             android:textColorHint="#000"
             android:textSize="22dp" />
 
@@ -53,11 +55,11 @@
             android:orientation="horizontal"></LinearLayout>
 
         <EditText
-            android:id="@+id/NPrenom"
+            android:id="@+id/NDatePlan"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/border"
-            android:hint="Prenom"
+            android:hint="Date Plan"
             android:paddingLeft="10dp"
             android:textAlignment="center"
             android:textColorHint="#000"
@@ -70,16 +72,21 @@
 
 
         <EditText
-            android:id="@+id/NVille"
+            android:id="@+id/NUtilisateur"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/border"
-            android:hint="Ville"
-            android:textAlignment="center"
+            android:hint="Utilisateur"
             android:paddingLeft="10dp"
+            android:textAlignment="center"
             android:textColorHint="#000"
             android:textSize="22dp" />
 
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,14 +94,14 @@
             android:orientation="horizontal"></LinearLayout>
 
         <EditText
-            android:id="@+id/NTel"
+            android:id="@+id/NClient"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border"
+            android:hint="Client"
             android:inputType="number"
-            android:textAlignment="center"
-            android:layout_height="50dp"
-            android:background="@drawable/border"
-            android:hint="Telephone"
             android:paddingLeft="10dp"
+            android:textAlignment="center"
             android:textColorHint="#000"
             android:textSize="22dp" />
 
@@ -103,51 +110,15 @@
             android:layout_height="5dp"
             android:orientation="horizontal"></LinearLayout>
 
-        <EditText
-            android:id="@+id/NMail"
-            android:inputType="textEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textAlignment="center"
-            android:background="@drawable/border"
-            android:hint="Mail"
-            android:paddingLeft="10dp"
-            android:textColorHint="#000"
-            android:textSize="22dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:orientation="horizontal"></LinearLayout>
 
-        <EditText
-            android:id="@+id/NAdresse"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/border"
-            android:hint="Adresse"
-            android:paddingLeft="10dp"
-            android:textColorHint="#000"
-            android:textSize="22dp" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:orientation="horizontal"></LinearLayout>
-
-        <EditText
-            android:id="@+id/NCodeP"
-            android:inputType="number"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/border"
-            android:hint="Code Postal"
-            android:paddingLeft="10dp"
-            android:textColorHint="#000"
-            android:textSize="22dp" />
-
 
 
         <Button

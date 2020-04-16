@@ -57,14 +57,14 @@ public class MenuActivity extends AppCompatActivity {
         );
         newProject.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(MenuActivity.this, Projet.class);
+                                            Intent intent = new Intent(MenuActivity.this, NouveauProjet.class);
                                             startActivity(intent);
                                         }
                                     }
         );
         projects.setOnClickListener(new View.OnClickListener() {
                                         public void onClick(View v) {
-                                            Intent intent = new Intent(MenuActivity.this, ProjectsList.class);
+                                            Intent intent = new Intent(MenuActivity.this, ListeProjets.class);
                                             startActivity(intent);
                                         }
                                     }

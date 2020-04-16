@@ -19,17 +19,18 @@
         <activity
             android:name=".ListeClients"
             android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MenuActivity" />
         </activity>
+
         <activity
             android:name=".ClientDetails"
             android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
@@ -39,17 +40,16 @@
         <activity
             android:name=".NouveauClient"
             android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".NouveauClient" />
         </activity>
-        <activity android:name=".ProjectsList" />
         <activity
             android:name=".Connection"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,7 +59,7 @@
         <activity
             android:name=".MenuActivity"
             android:parentActivityName=".Connection"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
@@ -69,7 +69,7 @@
         <activity
             android:name=".Client"
             android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
@@ -79,7 +79,7 @@
         <activity
             android:name=".Projet"
             android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
@@ -87,9 +87,39 @@
                 android:value=".MenuActivity" />
         </activity>
         <activity
+            android:name=".ListeProjets"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="fullSensor">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MenuActivity" />
+        </activity>
+        <activity
+            android:name=".ProjetDetails"
+            android:parentActivityName=".ListeProjets"
+            android:screenOrientation="fullSensor">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ListeProjets" />
+        </activity>
+        <activity
+            android:name=".NouveauProjet"
+            android:parentActivityName=".MenuActivity"
+            android:screenOrientation="fullSensor">
+
+            <!-- Parent activity meta-data to support Android 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NouveauProjet" />
+        </activity>
+        <activity
             android:name=".Devis"
             android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
@@ -99,7 +129,7 @@
         <activity
             android:name=".ListeDevis"
             android:parentActivityName=".MenuActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data
@@ -109,7 +139,7 @@
         <activity
             android:name=".DevisDetails"
             android:parentActivityName=".ListeDevis"
-            android:screenOrientation="landscape">
+            android:screenOrientation="fullSensor">
 
             <!-- Parent activity meta-data to support Android 4.0 and lower -->
             <meta-data

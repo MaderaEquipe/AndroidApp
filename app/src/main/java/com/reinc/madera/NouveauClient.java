@@ -33,7 +33,6 @@ public class NouveauClient extends AppCompatActivity {
         edVille = (EditText) findViewById(R.id.NVille);
         edTel = (EditText) findViewById(R.id.NTel);
         edMail = (EditText) findViewById(R.id.NMail);
-
     }
 
     public void sendPostData(View view) {
