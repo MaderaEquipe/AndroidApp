@@ -12,7 +12,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class NouveauProjet extends AppCompatActivity{
         Button btnN;
@@ -20,7 +23,8 @@ public class NouveauProjet extends AppCompatActivity{
         Spinner spinner;
         ArrayList<String> clientList;
         private Location mLocation;
-
+        String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+        String user1 = "Administrator";
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -29,35 +33,32 @@ public class NouveauProjet extends AppCompatActivity{
 
 
             btnN = (Button) findViewById(R.id.btnN);
-            edLabelPlan = (EditText) findViewById(R.id.NNom);
-            edDatePlan = (EditText) findViewById(R.id.NDatePlan);
-            edUtilisateur = (EditText) findViewById(R.id.NUtilisateur);
+            edLabelPlan = (EditText) findViewById(R.id.NLabelPlan);
             edClient = (EditText) findViewById(R.id.NClient);
-            spinner = (Spinner) findViewById(R.id.spinner);
 
         }
 
-        public void sendPostData(View view) {
+    public void sendPostData(View view) {
 
-            FileDownloader myFd = new FileDownloader(com.reinc.madera.NouveauProjet.this) {
-                @Override
-                protected void onPostExecute(String result) {
-                    super.onPostExecute(result);
+        FileDownloader myFd = new FileDownloader(NouveauProjet.this) {
+            @Override
+            protected void onPostExecute(String result) {
+                super.onPostExecute(result);
 
-                    Toast.makeText(com.reinc.madera.NouveauProjet.this, result, Toast.LENGTH_LONG).show();
-                }
-            };
-            myFd.setMethod("POST");
+                Toast.makeText(NouveauProjet.this, result, Toast.LENGTH_LONG).show();
+            }
+        };
+        myFd.setMethod("POST");
 
-            myFd.addVariable( "labelClient", ((EditText) findViewById(R.id.NNom)).getText().toString());
-            myFd.addVariable( "datePlan", ((EditText) findViewById(R.id.NDatePlan)).getText().toString());
-            myFd.addVariable( "utilisateur", ((EditText) findViewById(R.id.NUtilisateur)).getText().toString());
+            myFd.addVariable( "labelClient", ((EditText) findViewById(R.id.NLabelPlan)).getText().toString());
+            myFd.addVariable( "datePlan", (currentDate));
+            myFd.addVariable( "utilisateur", (user1));
             myFd.addVariable( "client", ((EditText) findViewById(R.id.NClient)).getText().toString());
             Log.i("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", String.valueOf(myFd));
             myFd.execute("https://api-madera.herokuapp.com/api/projets/");
 
-            Intent intent = new Intent(com.reinc.madera.NouveauProjet.this, ListeClients.class);
-            Toast.makeText(com.reinc.madera.NouveauProjet.this,
+            Intent intent = new Intent(NouveauProjet.this, NouveauPlan.class);
+            Toast.makeText(NouveauProjet.this,
                     "Projet ajouté", Toast.LENGTH_SHORT).show();
             startActivity(intent);
         }

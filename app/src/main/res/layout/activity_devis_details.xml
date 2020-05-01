@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121"
+                android:textColor="#727272"
                 android:layout_marginLeft="100dp"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="25dp"
@@ -136,7 +136,7 @@
                 android:layout_marginLeft="400dp"
                 android:layout_marginTop="75dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121"
+                android:textColor="#727272"
                 android:textSize="23dp" />
 
             <!--/////////////////////////////////////////////////////////////////-->
