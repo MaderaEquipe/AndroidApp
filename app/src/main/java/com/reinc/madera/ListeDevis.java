@@ -56,6 +56,7 @@ public class ListeDevis extends AppCompatActivity {
                         JSONObject curDevis = devis.getJSONObject(i);
 
                         String devisId = curDevis.getString("id");
+                        String nomDevis = curDevis.getString("nomDevis");
                         String etatDevis = curDevis.getString("etatDevis");
                         String totalHT = curDevis.getString("totalHT");
                         String totalTTC = curDevis.getString("totalTTC");
@@ -63,7 +64,7 @@ public class ListeDevis extends AppCompatActivity {
                         String creationDate = curDevis.getString("dateCreation");
                         String projet = curDevis.getString("projet");
 
-                        Devis newDevis = new Devis(devisId, etatDevis, totalHT, totalTTC, tauxRemise, creationDate, projet);
+                        Devis newDevis = new Devis(devisId, nomDevis, etatDevis, totalHT, totalTTC, tauxRemise, creationDate, projet);
                         devisList.add(newDevis);
 
 

@@ -26,6 +26,8 @@ public class DevisDetails extends AppCompatActivity {
     TextView tauxRemiseView = null;
     TextView creationDateView = null;
     TextView projetView = null;
+    TextView nomDevisView = null;
+
 
     Button btnModif;
     Button btnSup;
@@ -44,9 +46,23 @@ public class DevisDetails extends AppCompatActivity {
         btnModif.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                FileDownloader myFd = new FileDownloader(DevisDetails.this) {
+                    @Override
+                    protected void onPostExecute(String result) {
+                        super.onPostExecute(result);
 
-                Intent intent = new Intent(DevisDetails.this, DevisDetails.class);
+                        //Toast.makeText(ClientDetails.this, result, Toast.LENGTH_LONG).show();
+                    }
+                };
+
+                myFd.setMethod("PUT");
+                myFd.addVariable("IdDevis", devisId);
+                myFd.execute("https://api-madera.herokuapp.com/api/devis/" + devisId);
+
+                Intent intent = new Intent(DevisDetails.this, MenuActivity.class);
                 startActivity(intent);
+                Toast.makeText(DevisDetails.this,
+                        "Devis validé", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -104,7 +120,7 @@ public class DevisDetails extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
+        nomDevisView = (TextView) findViewById(R.id.devisNom);
         etatDevisView = (TextView) findViewById(R.id.clientName);
         totalHTView = (TextView) findViewById(R.id.clientFirstName);
         tauxRemiseView = (TextView) findViewById(R.id.clientAddress1);
@@ -115,14 +131,13 @@ public class DevisDetails extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-
+        TextView nomDevisView = null;
         TextView etatDevisView = null;
         TextView totalHTView = null;
         TextView totalTTCView = null;
         TextView tauxRemiseView = null;
         TextView creationDateView = null;
         TextView projetView = null;
-
     }
 
     private void loadDevisData(String clientId) {
@@ -134,6 +149,9 @@ public class DevisDetails extends AppCompatActivity {
                 JSONObject jsonObj;
                 try {
                     jsonObj = new JSONObject(result);
+                    String nomDevis = jsonObj.getString("nomDevis");
+                    nomDevisView = (TextView) findViewById(R.id.devisNom);
+                    nomDevisView.setText(nomDevis);
 
                     String etatDevis = jsonObj.getString("etatDevis");
                     etatDevisView = (TextView) findViewById(R.id.etatDevis);

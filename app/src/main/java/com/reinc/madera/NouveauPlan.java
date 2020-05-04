@@ -22,8 +22,9 @@ public class NouveauPlan extends AppCompatActivity {
     EditText edLabelPlan, edDatePlan, edUtilisateur, edClient;
     TextView liste, cmpte;
     ArrayList<String> clientList;
-    String currentDate = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
+    String currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
     String user1 = "Administrator";
+    String encours = "En attente de validation";
     private Location mLocation;
     int red = Color.parseColor("#CA2222");
     int green = Color.parseColor("#008577");
@@ -32,6 +33,8 @@ public class NouveauPlan extends AppCompatActivity {
     int min = 23000;
     int range = max - min + 1;
     int rand = (int)(Math.random() * range) + min;
+    int totalTTC = 0;
+    int totalHT = 0;
     String module = "Module Mur, Prix : " + rand + "€.";
 
 
@@ -135,16 +138,20 @@ public class NouveauPlan extends AppCompatActivity {
                                   public void onClick(View v) {
                                       liste.setText(module);
                                       compteur ++;
+                                      totalHT = totalHT + rand;
                                       cmpte.setText("Modules : " + compteur);
                                   }
                               }
         );
 
+
+
     }
 
 
-    public void sendPostData(View view) {
+    public void sendPostDataDevis(View view) {
 
+        totalTTC = (int) (totalHT * 1.2);
         FileDownloader myFd = new FileDownloader(NouveauPlan.this) {
             @Override
             protected void onPostExecute(String result) {
@@ -152,16 +159,18 @@ public class NouveauPlan extends AppCompatActivity {
             }
         };
         myFd.setMethod("POST");
+        myFd.addVariable("nomDevis", (encours));
+        myFd.addVariable("etatDevis", (encours));
+        myFd.addVariable("totalHT", String.valueOf(totalHT));
+        myFd.addVariable("totalTTC", String.valueOf(totalTTC));
+        myFd.addVariable("tauxRemise", String.valueOf(0));
+        myFd.addVariable("dateCreation", (currentDate));
+        myFd.addVariable("projet", (encours));
+        myFd.execute("https://api-madera.herokuapp.com/api/devis/");
 
-        myFd.addVariable("labelClient", ((EditText) findViewById(R.id.NLabelPlan)).getText().toString());
-        myFd.addVariable("datePlan", (currentDate));
-        myFd.addVariable("utilisateur", (user1));
-        myFd.addVariable("client", ((EditText) findViewById(R.id.NClient)).getText().toString());
-        myFd.execute("https://api-madera.herokuapp.com/api/projets/");
-
-        Intent intent = new Intent(NouveauPlan.this, MenuActivity.class);
+        Intent intent = new Intent(NouveauPlan.this, ListeDevis.class);
         Toast.makeText(NouveauPlan.this,
-                "Projet ajouté", Toast.LENGTH_SHORT).show();
+                "Plan ajouté", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 

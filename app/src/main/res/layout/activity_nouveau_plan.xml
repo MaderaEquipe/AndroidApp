@@ -91,6 +91,7 @@
             android:layout_marginLeft="240dp"
             android:background="#CA2222 "
             android:text="Valider devis"
+            android:onClick="sendPostDataDevis"
             android:textColor="@android:color/white" />
 
 

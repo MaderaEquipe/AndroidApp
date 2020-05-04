@@ -2,6 +2,7 @@ package com.reinc.madera;
 
 public class Devis {
     private String idDevis;
+    private String nom;
     private String etatDevis;
     private String totalHT;
     private String totalTTC;
@@ -9,8 +10,9 @@ public class Devis {
     private String creationDate;
     private String projet;
 
-    public Devis(String idDevis, String etatDevis, String totalHT, String totalTTC, String tauxRemise, String creationDate, String projet) {
+    public Devis(String idDevis, String nom, String etatDevis, String totalHT, String totalTTC, String tauxRemise, String creationDate, String projet) {
         this.idDevis = idDevis;
+        this.nom = nom;
         this.etatDevis = etatDevis;
         this.totalHT = totalHT;
         this.totalTTC = totalTTC;
@@ -25,6 +27,14 @@ public class Devis {
 
     public void setIdDevis(String idDevis) {
         this.idDevis = idDevis;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public String getEtatDevis() {
@@ -74,6 +84,5 @@ public class Devis {
     public void setProjet(String projet) {
         this.projet = projet;
     }
-
 }
 
