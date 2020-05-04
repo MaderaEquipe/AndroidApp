@@ -12,12 +12,10 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".NouveauPlan"
-            android:label="@string/title_activity_nouveau_plan"
-            android:parentActivityName=".NouveauProjet"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".NouveauProjet">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.reinc.madera.NouveauProjet" />
+                android:value=".NouveauProjet" />
         </activity>
         <activity
             android:name=".ListeClients"

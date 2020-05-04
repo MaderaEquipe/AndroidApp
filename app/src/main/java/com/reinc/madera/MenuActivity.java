@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
     Button btnProjets, btnClients, btnDevis, newProject, projects, clients, newClient, devis;
+    LinearLayout LayoutProjet, LayoutClient, LayoutDevis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,35 +25,31 @@ public class MenuActivity extends AppCompatActivity {
         newClient  = (Button)findViewById(R.id.newClient);
         clients = (Button)findViewById(R.id.voirClient);
         devis = (Button)findViewById(R.id.voirDevis);
-
+        LayoutProjet = (LinearLayout)findViewById(R.id.LayoutProjet);
+        LayoutClient = (LinearLayout)findViewById(R.id.LayoutClient);
+        LayoutDevis = (LinearLayout)findViewById(R.id.LayoutDevis);
 
         btnClients.setOnClickListener(new View.OnClickListener() {
                                        public void onClick(View v) {
-                                           newClient.setVisibility(View.VISIBLE);
-                                           clients.setVisibility(View.VISIBLE);
-                                           newProject.setVisibility(View.INVISIBLE);
-                                           projects.setVisibility(View.INVISIBLE);
-                                           devis.setVisibility(View.INVISIBLE);
+                                           LayoutClient.setVisibility(View.VISIBLE);
+                                           LayoutDevis.setVisibility(View.GONE);
+                                           LayoutProjet.setVisibility(View.GONE);
                                        }
                                    }
         );
         btnProjets.setOnClickListener(new View.OnClickListener() {
                                          public void onClick(View v) {
-                                             newProject.setVisibility(View.VISIBLE);
-                                             projects.setVisibility(View.VISIBLE);
-                                             newClient.setVisibility(View.INVISIBLE);
-                                             clients.setVisibility(View.INVISIBLE);
-                                             devis.setVisibility(View.INVISIBLE);
+                                             LayoutClient.setVisibility(View.GONE);
+                                             LayoutDevis.setVisibility(View.GONE);
+                                             LayoutProjet.setVisibility(View.VISIBLE);
                                          }
                                      }
         );
         btnDevis.setOnClickListener(new View.OnClickListener() {
                                           public void onClick(View v) {
-                                              newProject.setVisibility(View.INVISIBLE);
-                                              projects.setVisibility(View.INVISIBLE);
-                                              newClient.setVisibility(View.INVISIBLE);
-                                              clients.setVisibility(View.INVISIBLE);
-                                              devis.setVisibility(View.VISIBLE);
+                                              LayoutClient.setVisibility(View.GONE);
+                                              LayoutDevis.setVisibility(View.VISIBLE);
+                                              LayoutProjet.setVisibility(View.GONE);
                                           }
                                       }
         );
