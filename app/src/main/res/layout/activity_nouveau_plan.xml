@@ -19,12 +19,12 @@
             android:id="@+id/murT"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:background="#008577"
+            android:background="#CA2222"
             android:text="Mur"
+            android:textColor="@android:color/white"
             android:textStyle="italic"
             tools:layout_editor_absoluteX="5dp"
-            tools:layout_editor_absoluteY="0dp"
-            android:textColor="@android:color/white" />
+            tools:layout_editor_absoluteY="0dp" />
 
         <Button
             android:id="@+id/solT"
@@ -184,6 +184,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/border"
+                        android:inputType="numberDecimal"
                         android:ems="10"
                         android:hint="Quantiter" />
 
@@ -193,6 +194,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/fenetreLargeur"
                         android:layout_weight="1"
+                        android:inputType="numberDecimal"
                         android:background="@drawable/border"
                         android:ems="10"
                         android:hint="Profondeur" />
@@ -204,6 +206,7 @@
                         android:layout_below="@id/fenetreLongueur"
                         android:layout_alignParentRight="true"
                         android:layout_weight="1"
+                        android:inputType="numberDecimal"
                         android:background="@drawable/border"
                         android:ems="10"
                         android:hint="Largeur" />
@@ -214,6 +217,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/fenetreQuantiter"
                         android:layout_weight="1"
+                        android:inputType="numberDecimal"
                         android:background="@drawable/border"
                         android:ems="10"
                         android:hint="Longueur" />
@@ -259,7 +263,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/ok"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|right"
@@ -277,19 +281,30 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textViewQuantiter6"
-                        android:layout_width="62dp"
+                        android:id="@+id/module"
+                        android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="Module : "
-                        android:textAlignment="textEnd"
+                        android:textAlignment="viewStart"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
+
 
                     <TextView
                         android:id="@+id/liste"
-                        android:layout_width="40dp"
+                        android:layout_width="340dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/liste2"
+                        android:layout_width="300dp"
                         android:layout_height="match_parent"
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
@@ -297,14 +312,6 @@
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
 
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="10dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
