@@ -91,7 +91,7 @@
             android:layout_marginLeft="240dp"
             android:background="#CA2222 "
             android:text="Valider devis"
-            android:onClick="sendPostDataDevis"
+            android:onClick="sendPostData"
             android:textColor="@android:color/white" />
 
 
@@ -137,7 +137,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Quantiter :"
+                        android:text="Quantité :"
                         android:textAlignment="viewStart"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />

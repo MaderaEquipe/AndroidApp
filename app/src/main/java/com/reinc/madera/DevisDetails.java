@@ -34,6 +34,7 @@ public class DevisDetails extends AppCompatActivity {
 
     private Location mLocation;
     String devisId;
+    String valider= "validé";
 
     static public String DEVIS_ID = "com.reinc.madera.IdDevis";
     @Override
@@ -57,9 +58,10 @@ public class DevisDetails extends AppCompatActivity {
 
                 myFd.setMethod("PUT");
                 myFd.addVariable("IdDevis", devisId);
+                myFd.addVariable( "etatDevis", (valider));
                 myFd.execute("https://api-madera.herokuapp.com/api/devis/" + devisId);
 
-                Intent intent = new Intent(DevisDetails.this, MenuActivity.class);
+                Intent intent = new Intent(DevisDetails.this, ListeDevis.class);
                 startActivity(intent);
                 Toast.makeText(DevisDetails.this,
                         "Devis validé", Toast.LENGTH_SHORT).show();
@@ -73,8 +75,6 @@ public class DevisDetails extends AppCompatActivity {
                     @Override
                     protected void onPostExecute(String result) {
                         super.onPostExecute(result);
-
-                        //Toast.makeText(ClientDetails.this, result, Toast.LENGTH_LONG).show();
                     }
                 };
 

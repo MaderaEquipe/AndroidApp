@@ -1,6 +1,5 @@
 package com.reinc.madera;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
@@ -8,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -144,14 +142,17 @@ public class NouveauPlan extends AppCompatActivity {
                               }
         );
 
+        totalTTC = (int) (totalHT * 1.2);
+        String stringTotalTTC = String.valueOf(totalTTC);
+        String stringTotalHT = String.valueOf(totalHT);
+
 
 
     }
 
 
-    public void sendPostDataDevis(View view) {
+    public void sendPostData(View view) {
 
-        totalTTC = (int) (totalHT * 1.2);
         FileDownloader myFd = new FileDownloader(NouveauPlan.this) {
             @Override
             protected void onPostExecute(String result) {
@@ -159,19 +160,20 @@ public class NouveauPlan extends AppCompatActivity {
             }
         };
         myFd.setMethod("POST");
-        myFd.addVariable("nomDevis", (encours));
-        myFd.addVariable("etatDevis", (encours));
-        myFd.addVariable("totalHT", String.valueOf(totalHT));
-        myFd.addVariable("totalTTC", String.valueOf(totalTTC));
-        myFd.addVariable("tauxRemise", String.valueOf(0));
-        myFd.addVariable("dateCreation", (currentDate));
-        myFd.addVariable("projet", (encours));
+
+        myFd.addVariable( "nomDevis", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
+        myFd.addVariable( "etatDevis", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
+        myFd.addVariable( "totalHT", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
+        myFd.addVariable( "totalTTC", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
+        myFd.addVariable( "tauxRemise", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
+        myFd.addVariable("dateCreation", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
+        myFd.addVariable( "projet", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
         myFd.execute("https://api-madera.herokuapp.com/api/devis/");
 
-        Intent intent = new Intent(NouveauPlan.this, ListeDevis.class);
+        /*Intent intent = new Intent(NouveauPlan.this, ListeDevis.class);
         Toast.makeText(NouveauPlan.this,
-                "Plan ajouté", Toast.LENGTH_SHORT).show();
-        startActivity(intent);
+                "Devis ajouté", Toast.LENGTH_SHORT).show();
+        startActivity(intent);*/
     }
 
 
