@@ -1,5 +1,6 @@
 package com.reinc.madera;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -170,10 +172,10 @@ public class NouveauPlan extends AppCompatActivity {
         myFd.addVariable( "idProjet", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
         myFd.execute("https://api-madera.herokuapp.com/api/devis/");
 
-        /*Intent intent = new Intent(NouveauPlan.this, ListeDevis.class);
+        Intent intent = new Intent(NouveauPlan.this, ListeDevis.class);
         Toast.makeText(NouveauPlan.this,
                 "Devis ajouté", Toast.LENGTH_SHORT).show();
-        startActivity(intent);*/
+        startActivity(intent);
     }
 
 
