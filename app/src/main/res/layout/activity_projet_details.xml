@@ -6,7 +6,7 @@
     android:layout_marginTop="16dp"
     android:padding="16dp"
     android:background="#fff"
-    tools:context="com.reinc.madera.ClientDetails">
+    tools:context="com.reinc.madera.ProjetDetails">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,11 +30,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Projet"
                 android:layout_marginLeft="50dp"
-                android:text="Détails Projet"
                 android:textColor="#000000"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
         </RelativeLayout>
 
         <include layout="@layout/item_divider" />
@@ -52,45 +53,45 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="25dp"
-                android:text="Nom du plan: "
+                android:text="Nom : "
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121"
+                android:textSize="23dp"/>
+
+            <TextView
+                android:id="@+id/nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nom projet"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#727272"
+                android:layout_marginLeft="80dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="25dp"
                 android:textSize="23dp"/>
 
             <!--/////////////////////////////////////////////////////////////////-->
 
             <TextView
-                android:id="@+id/projetLabelPlan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
-                android:layout_marginLeft="200dp"
-                android:layout_marginTop="25dp"
-                android:text="Nom Plan"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121"
-                android:textSize="23dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="500dp"
+                android:layout_marginStart="300dp"
                 android:layout_marginLeft="300dp"
                 android:layout_marginTop="25dp"
-                android:text="Date du plan : "
+                android:text="Date : "
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121"
                 android:textSize="23dp"/>
 
             <TextView
-                android:id="@+id/projetDatePlan"
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="date plan"
+                android:text="Date"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272"
                 android:layout_marginLeft="400dp"
-                android:layout_marginStart="650dp"
+                android:layout_marginStart="400dp"
                 android:layout_marginTop="25dp"
                 android:textSize="23dp"/>
 
@@ -108,7 +109,7 @@
                 android:textSize="23dp"/>
 
             <TextView
-                android:id="@+id/clientName"
+                android:id="@+id/client"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="180dp"
@@ -126,22 +127,22 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="130dp"
-                android:text="Commercial : : "
+                android:text="Commercial : "
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#212121"
                 android:textSize="23dp"/>
 
             <TextView
-                android:id="@+id/userName"
+                android:id="@+id/commercial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="160dp"
-                android:layout_marginLeft="120dp"
-                android:layout_marginTop="130dp"
-                android:text="Client"
+                android:text="Commercial "
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="#212121"
-                android:textSize="23dp" />
+                android:textColor="#727272"
+                android:layout_marginLeft="120dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="130dp"
+                android:textSize="23dp"/>
 
 
         </RelativeLayout>

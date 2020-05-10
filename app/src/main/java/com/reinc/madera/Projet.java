@@ -2,14 +2,14 @@ package com.reinc.madera;
 
 public class Projet{
 
-    private String id;
+    private String idProjet;
     private String labelPlan;
     private String datePlan;
     private String client;
     private String utilisateur;
 
-    public Projet(String id, String labelPlan, String datePlan, String client, String utilisateur) {
-        this.id = id;
+    public Projet(String idProjet, String labelPlan, String datePlan, String client, String utilisateur) {
+        this.idProjet = idProjet;
         this.labelPlan = labelPlan;
         this.datePlan = datePlan;
         this.client = client;
@@ -17,11 +17,11 @@ public class Projet{
     }
 
     public String getId() {
-        return id;
+        return idProjet;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String idProjet) {
+        this.idProjet = idProjet;
     }
 
     public String getLabelPlan() {

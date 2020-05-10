@@ -1,7 +1,6 @@
 package com.reinc.madera;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -18,17 +17,21 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class ProjetDetails extends AppCompatActivity {
 
+    TextView nom = null;
+    TextView date = null;
+    TextView client = null;
+    TextView commercial = null;
 
-    TextView labelPlanView = null;
-    TextView datePlanView = null;
-    TextView clientView = null;
-    TextView utilisateurView = null;
 
+    Button btnMail = null;
+    Button btnTelB = null;
+    Button btnGo = null;
     Button btnModif;
     Button btnSup;
 
@@ -40,15 +43,16 @@ public class ProjetDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projet_details);
-
         btnModif = (Button) findViewById(R.id.button4);
         btnSup = (Button) findViewById(R.id.button5);
         btnModif.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
 
-                Intent intent = new Intent(ProjetDetails.this, ProjetDetails.class);
+                Intent intent = new Intent(ProjetDetails.this, ListeProjets.class);
                 startActivity(intent);
+
+
             }
         });
 
@@ -65,7 +69,7 @@ public class ProjetDetails extends AppCompatActivity {
                 };
 
                 myFd.setMethod("DELETE");
-                myFd.addVariable("IdProjet", projetId);
+                myFd.addVariable("id", projetId);
                 // myFd.addVariable( "IdClient", ((EditText) findViewById(R.id.NNom)).getText().toString());
                 Log.i("LLLLLLLLLLLL", projetId);
                 myFd.execute("https://api-madera.herokuapp.com/api/projets/" + projetId);
@@ -80,7 +84,7 @@ public class ProjetDetails extends AppCompatActivity {
 
         Intent itt = getIntent();
         projetId = itt.getStringExtra(ProjetDetails.PROJET_ID);
-        loadProjetData(projetId);
+        loadClientData(projetId);
 
         // Acquire a reference to the system Location Manager
         LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
@@ -114,24 +118,35 @@ public class ProjetDetails extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        labelPlanView = (TextView) findViewById(R.id.projetLabelPlan);
-        datePlanView = (TextView) findViewById(R.id.projetDatePlan);
-        clientView = (TextView) findViewById(R.id.clientName);
-        utilisateurView = (TextView) findViewById(R.id.userName);
+        nom = (TextView) findViewById(R.id.nom);
+        date = (TextView) findViewById(R.id.date);
+        client = (TextView) findViewById(R.id.client);
+        commercial = (TextView) findViewById(R.id.commercial);
+
+
+        btnMail = (Button) findViewById(R.id.btnMail);
+        btnTelB = (Button) findViewById(R.id.btnTelB);
+        btnGo = (Button) findViewById(R.id.btnGo);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
 
-        TextView labelPlanView = null;
-        TextView datePlanView = null;
-        TextView clientView = null;
-        TextView utilisateurView = null;
+        TextView nom = null;
+        TextView date = null;
+        TextView client = null;
+        TextView commercial = null;
 
+        btnMail.setOnClickListener(null);
+        btnMail = null;
+        btnTelB.setOnClickListener(null);
+        btnTelB = null;
+        btnGo.setOnClickListener(null);
+        btnGo = null;
     }
 
-    private void loadProjetData(String clientId) {
+    private void loadClientData(String projetId) {
         new FileDownloader(ProjetDetails.this) {
             @Override
             protected void onPostExecute(String result) {
@@ -141,28 +156,54 @@ public class ProjetDetails extends AppCompatActivity {
                 try {
                     jsonObj = new JSONObject(result);
 
-                    String labelPlan = jsonObj.getString("labelPlan");
-                    labelPlanView = (TextView) findViewById(R.id.projetLabelPlan);
-                    labelPlanView.setText(labelPlan);
+                    String clientNom = jsonObj.getString("labelPlan");
+                    nom = (TextView) findViewById(R.id.nom);
+                    nom.setText(clientNom);
 
-                    String datePlan = jsonObj.getString("datePlan");
-                    datePlanView = (TextView) findViewById(R.id.projetDatePlan);
-                    datePlanView.setText(datePlan);
+                    String clientPrenom = jsonObj.getString("datePlan");
+                    date = (TextView) findViewById(R.id.date);
+                    date.setText(clientPrenom);
 
-                    String client = jsonObj.getString("client");
-                    clientView = (TextView) findViewById(R.id.clientName);
-                    clientView.setText(client);
+                    String clientAdresse = jsonObj.getString("client");
+                    client = (TextView) findViewById(R.id.client);
+                    client.setText(clientAdresse);
 
 
-                    String utilisateur = jsonObj.getString("utilisateur");
-                    utilisateurView = (TextView) findViewById(R.id.userName);
-                    utilisateurView.setText(utilisateur);
+                    String clientCodeP = jsonObj.getString("utilisateur");
+                    commercial = (TextView) findViewById(R.id.commercial);
+                    commercial.setText(clientCodeP);
+
+
+                    // Obtenir les coordonnées GPS du client, pour calculer la distance
+                    new FileDownloader(ProjetDetails.this) {
+                        @Override
+                        protected void onPostExecute(String result) {
+                            super.onPostExecute(result);
+
+                            JSONObject jsonObj;
+                            try {
+                                jsonObj = new JSONObject(result);
+                                JSONArray gResults = jsonObj.getJSONArray("results");
+                                JSONObject gFirstResult = gResults.getJSONObject(0);
+                                JSONObject gGeometry = gFirstResult.getJSONObject("geometry");
+                                JSONObject gLocation = gGeometry.getJSONObject("location");
+                                String gLat = String.valueOf(gLocation.getDouble("lat"));
+                                String gLng = String.valueOf(gLocation.getDouble("lng"));
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+                        }
+                    };//.execute("https://maps.googleapis.com/maps/api/geocode/json?address="+clientAdresse+"&key="+R.string.GoogleApiKey);
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-        }.execute("https://api-madera.herokuapp.com/api/projet/" + projetId);
+        }.execute("https://api-madera.herokuapp.com/api/projets/" + projetId);
     }
 
 
@@ -176,11 +217,11 @@ public class ProjetDetails extends AppCompatActivity {
             }
         };
         myFd.setMethod("DELETE");
-        myFd.addVariable("IdProjet", projetId);
+        myFd.addVariable("id", projetId);
         //myFd.addVariable( "IdClient", ((EditText) findViewById(R.id.NNom)).getText().toString());
 
-        myFd.execute("https://api-madera.herokuapp.com/api/projet/");
-        Toast.makeText(this, "Le projet à bien été supprime", Toast.LENGTH_SHORT).show();
+        myFd.execute("https://api-madera.herokuapp.com/api/projets/");
+        Toast.makeText(this, "Le projet a bien été supprimeé", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent (ProjetDetails.this, ListeProjets.class);
         intent.putExtra(PROJET_ID, String.valueOf(projetId));
         startActivity(intent);
@@ -188,6 +229,7 @@ public class ProjetDetails extends AppCompatActivity {
     }
 
 }
+
 
 
 

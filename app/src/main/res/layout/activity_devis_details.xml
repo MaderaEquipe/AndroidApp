@@ -99,8 +99,8 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272"
-                android:layout_marginLeft="400dp"
-                android:layout_marginStart="400dp"
+                android:layout_marginLeft="800dp"
+                android:layout_marginStart="550dp"
                 android:layout_marginTop="25dp"
                 android:textSize="23dp"/>
 
@@ -182,7 +182,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="250dp"
-                android:layout_marginStart="250dp"
+                android:layout_marginStart="300dp"
                 android:layout_marginTop="135dp"
                 android:text="Date de création: "
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -196,7 +196,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#727272"
                 android:layout_marginLeft="450dp"
-                android:layout_marginStart="450dp"
+                android:layout_marginStart="550dp"
                 android:layout_marginTop="135dp"
                 android:textSize="23dp"/>
 
