@@ -1,6 +1,7 @@
 package com.reinc.madera;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -113,10 +114,10 @@ public class ProjetDetails extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        labelPlanView = (TextView) findViewById(R.id.clientName);
-        datePlanView = (TextView) findViewById(R.id.clientFirstName);
-        clientView = (TextView) findViewById(R.id.clientAddress1);
-        utilisateurView = (TextView) findViewById(R.id.clientCodeP);
+        labelPlanView = (TextView) findViewById(R.id.projetLabelPlan);
+        datePlanView = (TextView) findViewById(R.id.projetDatePlan);
+        clientView = (TextView) findViewById(R.id.clientName);
+        utilisateurView = (TextView) findViewById(R.id.userName);
     }
 
     @Override
@@ -148,14 +149,14 @@ public class ProjetDetails extends AppCompatActivity {
                     datePlanView = (TextView) findViewById(R.id.projetDatePlan);
                     datePlanView.setText(datePlan);
 
-                    //String client = jsonObj.getString("client");
-                    //clientView = (TextView) findViewById(R.id.client);
-                    //clientView.setText(client);
+                    String client = jsonObj.getString("client");
+                    clientView = (TextView) findViewById(R.id.clientName);
+                    clientView.setText(client);
 
 
-                   // String utilisateur = jsonObj.getString("utilisateur");
-                   // utilisateurView = (TextView) findViewById(R.id.utilisateur);
-                   // utilisateurView.setText(utilisateur);
+                    String utilisateur = jsonObj.getString("utilisateur");
+                    utilisateurView = (TextView) findViewById(R.id.userName);
+                    utilisateurView.setText(utilisateur);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
