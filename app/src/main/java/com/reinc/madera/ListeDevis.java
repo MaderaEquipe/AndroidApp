@@ -62,7 +62,7 @@ public class ListeDevis extends AppCompatActivity {
                         String totalTTC = curDevis.getString("totalTTC");
                         String tauxRemise = curDevis.getString("tauxRemise");
                         String creationDate = curDevis.getString("dateCreation");
-                        String projet = curDevis.getString("projet");
+                        String projet = curDevis.getString("idProjet");
 
                         Devis newDevis = new Devis(devisId, nomDevis, etatDevis, totalHT, totalTTC, tauxRemise, creationDate, projet);
                         devisList.add(newDevis);

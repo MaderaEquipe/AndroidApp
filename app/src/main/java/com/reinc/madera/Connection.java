@@ -35,7 +35,7 @@ public class Connection extends AppCompatActivity {
                                                   startActivity(intent);
 
                                               }else{
-                                                  Toast.makeText(getApplicationContext(), "Login ou mot de passe faux", Toast.LENGTH_SHORT).show();
+                                                  Toast.makeText(getApplicationContext(), "Login ou mot de passe incorrect", Toast.LENGTH_SHORT).show();
                                               }
                                           }
                                       }

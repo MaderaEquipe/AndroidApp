@@ -167,7 +167,7 @@ public class NouveauPlan extends AppCompatActivity {
         myFd.addVariable( "totalTTC", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
         myFd.addVariable( "tauxRemise", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
         myFd.addVariable("dateCreation", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.addVariable( "projet", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
+        myFd.addVariable( "idProjet", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
         myFd.execute("https://api-madera.herokuapp.com/api/devis/");
 
         /*Intent intent = new Intent(NouveauPlan.this, ListeDevis.class);

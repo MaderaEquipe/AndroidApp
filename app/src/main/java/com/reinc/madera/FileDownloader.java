@@ -23,7 +23,6 @@ public class FileDownloader extends AsyncTask<String, Void, String> {
     private ProgressDialog progress;
     private String sendMethod = "GET";
     private ArrayList<Pair> sendVariables = new ArrayList<Pair>();
-    private ArrayList<PairInt> sendVariablesInt = new ArrayList<PairInt>();
 
     public FileDownloader( Context ctx) {
         this.progress = new ProgressDialog(ctx);
@@ -34,9 +33,6 @@ public class FileDownloader extends AsyncTask<String, Void, String> {
     }
     public void addVariable( String key, String value) {
         this.sendVariables.add( new Pair( key, value));
-    }
-    public void addVariableInt( String key, int value) {
-        this.sendVariablesInt.add( new PairInt( key, value));
     }
 
     @Override
@@ -56,7 +52,6 @@ public class FileDownloader extends AsyncTask<String, Void, String> {
             URL url = new URL( params[0]);
             httpUrlConnection = (HttpURLConnection) url.openConnection();
             httpUrlConnection.setRequestMethod( this.sendMethod);
-            httpUrlConnection.setRequestProperty("Accept","*/*");
 
             // Ajout des variables POST s'il y en a...
             int len = this.sendVariables.size();
@@ -65,8 +60,9 @@ public class FileDownloader extends AsyncTask<String, Void, String> {
                 String reqData = "";
                 for (int i = 0; i<len; i++) {
                     Pair curPair = this.sendVariables.get(i);
-                    String encKey = URLEncoder.encode(curPair.getVarKey(), "utf-8");
-                    String encVal = URLEncoder.encode(curPair.getVarValue(), "utf-8");
+                    String encKey = URLEncoder.encode(curPair.getVarKey(), "UTF-8");
+                    String encVal = URLEncoder.encode(curPair.getVarValue(), "UTF-8");
+
                     if (reqData != "") reqData += "&";
                     reqData += encKey + "=" + encVal;
                 }
@@ -124,24 +120,7 @@ class Pair {
         return varValue;
     }
 
-    public Pair(String key, String value) {
-        this.varKey = key;
-        this.varValue = value;
-    }
-}
-class PairInt {
-    private String varKey;
-    private int varValue;
-
-    public String getVarKey() {
-        return varKey;
-    }
-
-    public int getVarValue() {
-        return varValue;
-    }
-
-    public PairInt(String key, int value) {
+    public Pair( String key, String value) {
         this.varKey = key;
         this.varValue = value;
     }

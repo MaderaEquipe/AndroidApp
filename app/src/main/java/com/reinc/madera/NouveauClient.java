@@ -3,7 +3,6 @@ package com.reinc.madera;
 import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -54,8 +53,7 @@ public class NouveauClient extends AppCompatActivity {
         myFd.addVariable( "villeClient", ((EditText) findViewById(R.id.NVille)).getText().toString());
         myFd.addVariable("emailClient", ((EditText) findViewById(R.id.NMail)).getText().toString());
         myFd.addVariable( "telClient", ((EditText) findViewById(R.id.NTel)).getText().toString());
-        Log.i("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", String.valueOf(myFd));
-        myFd.execute("https://api-madera.herokuapp.com/api/clients/");
+        myFd.execute("https://api-madera.herokuapp.com/api/clients");
 
         Intent intent = new Intent(NouveauClient.this, ListeClients.class);
         Toast.makeText(NouveauClient.this,

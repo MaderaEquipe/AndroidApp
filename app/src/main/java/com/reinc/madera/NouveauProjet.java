@@ -51,7 +51,7 @@ public class NouveauProjet extends AppCompatActivity{
             myFd.addVariable( "datePlan", (currentDate));
             myFd.addVariable( "utilisateur", (user1));
             myFd.addVariable( "client", ((EditText) findViewById(R.id.NClient)).getText().toString());
-            myFd.execute("https://api-madera.herokuapp.com/api/projets/");
+            myFd.execute("https://api-madera.herokuapp.com/api/projets");
 
             Intent intent = new Intent(NouveauProjet.this, NouveauPlan.class);
             Toast.makeText(NouveauProjet.this,
