@@ -19,8 +19,8 @@ import java.util.Locale;
 
 public class NouveauPlan extends AppCompatActivity {
     Button mur, sol, balcon, porte, fenetre, toit, ok;
-    EditText edLabelPlan, edDatePlan, edUtilisateur, edClient;
-    TextView liste, cmpte;
+    EditText et3, et4, et0 ;
+    TextView liste, cmpte, tv3, tv4, tv0, unite1, unite2, unite3,unite4 ;
     ArrayList<String> clientList;
     String currentDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
     String user1 = "Administrator";
@@ -36,6 +36,7 @@ public class NouveauPlan extends AppCompatActivity {
     int totalTTC = 0;
     int totalHT = 0;
     String module = "Module Mur, Prix : " + rand + "€.";
+    String m= "m";
 
 
     @Override
@@ -53,6 +54,23 @@ public class NouveauPlan extends AppCompatActivity {
         ok = (Button) findViewById(R.id.ok);
         liste = (TextView)findViewById(R.id.liste);
         cmpte = (TextView)findViewById(R.id.module);
+        tv0 = (TextView)findViewById(R.id.textViewQuantiter);
+        tv3 = (TextView)findViewById(R.id.textViewQuantiter3);
+        tv4 = (TextView)findViewById(R.id.textViewQuantiter4);
+        et3 = (EditText)findViewById(R.id.fenetreProfondeur4);
+        et4 = (EditText)findViewById(R.id.fenetreLargeur4);
+        et0 = (EditText)findViewById(R.id.fenetreLongueur4);
+
+        unite1 = (TextView) findViewById(R.id.unite1);
+        unite2 = (TextView) findViewById(R.id.unite2);
+        unite3 = (TextView) findViewById(R.id.unite3);
+        unite4 = (TextView) findViewById(R.id.unite4);
+
+        unite1.setText(m);
+        unite2.setText(m);
+        unite3.setText(m);
+        unite4.setText(m);
+
 
 
         mur.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +81,21 @@ public class NouveauPlan extends AppCompatActivity {
                                        toit.setBackgroundColor(green);
                                        fenetre.setBackgroundColor(green);
                                        porte.setBackgroundColor(green);
+                                       tv0.setVisibility(View.VISIBLE);
+                                       tv3.setVisibility(View.VISIBLE);
+                                       tv4.setVisibility(View.VISIBLE);
+                                       et0.setVisibility(View.VISIBLE);
+                                       et3.setVisibility(View.VISIBLE);
+                                       et4.setVisibility(View.VISIBLE);
+                                       unite2.setVisibility(View.VISIBLE);
+                                       unite3.setVisibility(View.VISIBLE);
+                                       unite4.setVisibility(View.VISIBLE);
+
+                                       unite1.setText(m);
+                                       unite2.setText(m);
+                                       unite3.setText(m);
+                                       unite4.setText(m);
+
                                        int rand = (int)(Math.random() * range) + min;
                                        module = module + " Module Mur, Prix : " + rand + "€." ;
                                    }
@@ -76,6 +109,21 @@ public class NouveauPlan extends AppCompatActivity {
                                        toit.setBackgroundColor(green);
                                        fenetre.setBackgroundColor(green);
                                        porte.setBackgroundColor(green);
+                                       tv0.setVisibility(View.GONE);
+                                       tv3.setVisibility(View.GONE);
+                                       tv4.setVisibility(View.GONE);
+                                       et0.setVisibility(View.GONE);
+                                       et3.setVisibility(View.GONE);
+                                       et4.setVisibility(View.GONE);
+                                       unite2.setVisibility(View.GONE);
+                                       unite3.setVisibility(View.GONE);
+                                       unite4.setVisibility(View.GONE);
+
+                                       unite1.setText("m2");
+                                       unite2.setText("m2");
+                                       unite3.setText("m2");
+                                       unite4.setText("m2");
+
                                        int rand = (int)(Math.random() * range) + min;
                                        module = module + " Module Sol, Prix : " + rand + "€."  ;
                                    }
@@ -89,6 +137,21 @@ public class NouveauPlan extends AppCompatActivity {
                                           toit.setBackgroundColor(green);
                                           fenetre.setBackgroundColor(green);
                                           porte.setBackgroundColor(green);
+                                          tv0.setVisibility(View.VISIBLE);
+                                          tv3.setVisibility(View.VISIBLE);
+                                          tv4.setVisibility(View.VISIBLE);
+                                          et0.setVisibility(View.VISIBLE);
+                                          et3.setVisibility(View.VISIBLE);
+                                          et4.setVisibility(View.VISIBLE);
+                                          unite2.setVisibility(View.VISIBLE);
+                                          unite3.setVisibility(View.VISIBLE);
+                                          unite4.setVisibility(View.VISIBLE);
+
+                                          unite1.setText("cm");
+                                          unite2.setText("cm");
+                                          unite3.setText("cm");
+                                          unite4.setText("cm");
+
                                           int rand = (int)(Math.random() * range) + min;
                                           module = module +" Module Balcon, Prix : " + rand + "€." ;
                                       }
@@ -102,6 +165,28 @@ public class NouveauPlan extends AppCompatActivity {
                                         toit.setBackgroundColor(red);
                                         fenetre.setBackgroundColor(green);
                                         porte.setBackgroundColor(green);
+                                        tv0.setVisibility(View.VISIBLE);
+                                        tv3.setVisibility(View.VISIBLE);
+                                        tv4.setVisibility(View.VISIBLE);
+                                        et0.setVisibility(View.VISIBLE);
+                                        et3.setVisibility(View.VISIBLE);
+                                        et4.setVisibility(View.VISIBLE);
+
+                                        tv0.setVisibility(View.GONE);
+                                        tv3.setVisibility(View.GONE);
+                                        tv4.setVisibility(View.GONE);
+                                        et0.setVisibility(View.GONE);
+                                        et3.setVisibility(View.GONE);
+                                        et4.setVisibility(View.GONE);
+                                        unite2.setVisibility(View.GONE);
+                                        unite3.setVisibility(View.GONE);
+                                        unite4.setVisibility(View.GONE);
+
+                                        unite1.setText("m2");
+                                        unite2.setText("m2");
+                                        unite3.setText("m2");
+                                        unite4.setText("m2");
+
                                         int rand = (int)(Math.random() * range) + min;
                                         module = module +" Module Toit, Prix : " + rand + "€." ;
                                     }
@@ -115,6 +200,19 @@ public class NouveauPlan extends AppCompatActivity {
                                          toit.setBackgroundColor(green);
                                          fenetre.setBackgroundColor(green);
                                          porte.setBackgroundColor(red);
+                                         tv0.setVisibility(View.VISIBLE);
+                                         tv3.setVisibility(View.VISIBLE);
+                                         tv4.setVisibility(View.VISIBLE);
+                                         et0.setVisibility(View.VISIBLE);
+                                         et3.setVisibility(View.VISIBLE);
+                                         et4.setVisibility(View.VISIBLE);
+                                         unite2.setVisibility(View.VISIBLE);
+                                         unite3.setVisibility(View.VISIBLE);
+                                         unite4.setVisibility(View.VISIBLE);
+                                         unite1.setText("cm");
+                                         unite2.setText("cm");
+                                         unite3.setText("cm");
+                                         unite4.setText("cm");
                                          int rand = (int)(Math.random() * range) + min;
                                          module = module + " Module Porte,  Prix : " +rand + "€." ;
                                      }
@@ -128,6 +226,19 @@ public class NouveauPlan extends AppCompatActivity {
                                            toit.setBackgroundColor(green);
                                            fenetre.setBackgroundColor(red);
                                            porte.setBackgroundColor(green);
+                                           tv0.setVisibility(View.VISIBLE);
+                                           tv3.setVisibility(View.VISIBLE);
+                                           tv4.setVisibility(View.VISIBLE);
+                                           et0.setVisibility(View.VISIBLE);
+                                           et3.setVisibility(View.VISIBLE);
+                                           et4.setVisibility(View.VISIBLE);
+                                           unite2.setVisibility(View.VISIBLE);
+                                           unite3.setVisibility(View.VISIBLE);
+                                           unite4.setVisibility(View.VISIBLE);
+                                           unite1.setText("cm");
+                                           unite2.setText("cm");
+                                           unite3.setText("cm");
+                                           unite4.setText("cm");
                                            int rand = (int)(Math.random() * range) + min;
                                            module = module +" Module Fenêtre, Prix :" + rand + "€." ;
                                        }
@@ -163,14 +274,13 @@ public class NouveauPlan extends AppCompatActivity {
         };
         myFd.setMethod("POST");
 
-        myFd.addVariable( "nomDevis", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.addVariable( "etatDevis", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.addVariable( "totalHT", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.addVariable( "totalTTC", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.addVariable( "tauxRemise", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.addVariable("dateCreation", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.addVariable( "idProjet", ((EditText) findViewById(R.id.fenetreProfondeur4)).getText().toString());
-        myFd.execute("https://api-madera.herokuapp.com/api/devis/");
+        myFd.addVariable("nomDevis", (encours));
+        myFd.addVariable("etatDevis", (encours));
+        myFd.addVariable("totalHT", String.valueOf(totalHT));
+        myFd.addVariable("totalTTC", String.valueOf(totalTTC));
+        myFd.addVariable("tauxRemise", String.valueOf(0));
+        myFd.addVariable("dateCreation", (currentDate));
+        myFd.addVariable("projet", (encours));
 
         Intent intent = new Intent(NouveauPlan.this, ListeDevis.class);
         Toast.makeText(NouveauPlan.this,

@@ -181,13 +181,13 @@
 
                     <EditText
                         android:id="@+id/fenetreQuantiter4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/border"
-                        android:inputType="numberDecimal"
                         android:ems="10"
-                        android:hint="Quantiter" />
+                        android:hint="Quantiter"
+                        android:inputType="numberDecimal" />
 
                     <EditText
                         android:id="@+id/fenetreProfondeur4"
@@ -204,7 +204,6 @@
                         android:id="@+id/fenetreLargeur4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/fenetreLongueur"
                         android:layout_alignParentRight="true"
                         android:layout_weight="1"
                         android:inputType="numberDecimal"
@@ -228,13 +227,12 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="43dp"
                     android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/fenetreLongueur5"
+                    <TextView
+                        android:id="@+id/unite1"
                         android:layout_width="100dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="44dp"
                         android:layout_below="@+id/fenetreQuantiter"
                         android:layout_marginTop="1sp"
                         android:layout_weight="1"
@@ -242,20 +240,30 @@
                         android:ems="10"
                         android:hint="Unité" />
 
-                    <EditText
-                        android:id="@+id/fenetreLongueur6"
+                    <TextView
+                        android:id="@+id/unite2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="44dp"
                         android:layout_below="@+id/fenetreQuantiter"
                         android:layout_weight="1"
                         android:background="@drawable/border"
                         android:ems="10"
                         android:hint="Unité" />
 
-                    <EditText
-                        android:id="@+id/fenetreLongueur"
+                    <TextView
+                        android:id="@+id/unite3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_below="@+id/fenetreQuantiter"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:ems="10"
+                        android:hint="Unité" />
+
+                    <TextView
+                        android:id="@+id/unite4"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
                         android:layout_below="@+id/fenetreQuantiter"
                         android:layout_weight="1"
                         android:background="@drawable/border"
